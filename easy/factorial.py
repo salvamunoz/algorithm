@@ -6,4 +6,14 @@ def iterative_factorial(n: int) -> int:
         fact *= i
     return fact
 
+
+def recursive_factorial(n: int) -> int:
+    if n == 1:
+        return n
+    else:
+        temp = recursive_factorial(n - 1)
+        temp *= n
+    return temp
+
 print(iterative_factorial(5))
+print(recursive_factorial(5))
